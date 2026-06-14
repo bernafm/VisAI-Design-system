@@ -25,9 +25,10 @@
       "description": "Contexto suficiente para agentes de IA. No requiere servidor ni HTML."
     },
     "humanReference": {
+      "url": "https://vis-ai-design-system.vercel.app",
       "buildCommand": "cd design-system && npm run build",
       "output": "design-system/dist/",
-      "description": "Sitio estático portable (HTML + JS + CSS). Comprimir y subir a cualquier hosting, o abrir vía servidor estático. No es fuente canónica de valores."
+      "description": "Sitio estático portable (HTML + JS + CSS). URL en vivo para humanos; comprimir dist/ para compartir offline. No es fuente canónica de valores."
     },
     "siteSections": {
       "foundations": { "role": "visual-reference", "canonical": false },

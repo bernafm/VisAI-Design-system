@@ -31,7 +31,7 @@ export function InventoryPage() {
   return (
     <DocPage
       title="Inventory"
-      description="Fuente canónica legible: ${TOTAL_TOKENS} tokens + ${COMPONENTS.length} componentes. Los valores autoritativos viven en /tokens/*.json (raíz del repo). Esta página es su espejo; compártela exportando design-system/dist/ tras npm run build."
+      description={`Fuente canónica legible: ${TOTAL_TOKENS} tokens + ${COMPONENTS.length} componentes. Los valores autoritativos viven en /tokens/*.json (raíz del repo). Esta página es su espejo; compártela exportando design-system/dist/ tras npm run build.`}
     >
       <DocSection
         id="inventory-role"

@@ -40,6 +40,7 @@ La carpeta **`design-system/dist/`** contiene HTML + assets estáticos. Puedes:
 
 - Comprimirla en zip y enviarla
 - Subirla a Netlify Drop, Vercel, Google Drive (vista web), o cualquier hosting estático
+- **Referencia en vivo:** [vis-ai-design-system.vercel.app](https://vis-ai-design-system.vercel.app) (Foundations · Inventory · Components)
 - No requiere `localhost` ni un puerto fijo
 
 | Sección del sitio | Para humanos | Para agentes IA |
@@ -88,7 +89,7 @@ La carpeta **`design-system/dist/`** contiene HTML + assets estáticos. Puedes:
 | Animaciones | `tokens/motion.json` |
 | Iconografía | `tokens/iconography.json` |
 | API de componentes | `tokens/components.json` |
-| Referencia visual (humanos) | `design-system/dist/` tras `npm run build` |
+| Referencia visual (humanos) | [vis-ai-design-system.vercel.app](https://vis-ai-design-system.vercel.app) o `design-system/dist/` tras `npm run build` |
 
 ---
 
