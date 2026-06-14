@@ -1,0 +1,40 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "iconography": {
+    "library": {
+      "name": { "$value": "Phosphor Icons" },
+      "url": { "$value": "https://phosphoricons.com" },
+      "license": { "$value": "MIT" }
+    },
+    "weight": {
+      "base": {
+        "$value": "regular",
+        "$description": "Iconografía general de la UI."
+      },
+      "active": {
+        "$value": "duotone",
+        "$description": "Estados activos y capa VisAI. Duotone usa teal como trazo primario y lavanda como relleno secundario."
+      }
+    },
+    "size": {
+      "inline": { "$value": "{size.icon.sm}" },
+      "ui": { "$value": "{size.icon.md}" },
+      "feature": { "$value": "{size.icon.lg}" }
+    },
+    "color": {
+      "default": { "light": "{color.text-secondary}", "dark": "{color.text-secondary}" },
+      "accent": { "light": "{color.accent}", "dark": "{color.accent}" },
+      "insight": { "light": "{color.accent-secondary}", "dark": "{color.accent-secondary}" },
+      "on-surface": { "light": "{color.text-primary}", "dark": "{color.text-primary}" }
+    },
+    "duotone": {
+      "primaryColor": { "light": "{color.accent}", "dark": "{color.accent}" },
+      "secondaryColor": { "light": "{color.accent-secondary}", "dark": "{color.accent-secondary}" },
+      "secondaryOpacity": { "$value": "0.35" }
+    },
+    "accessibility": {
+      "decorative": { "$description": "aria-hidden=true cuando el icono es puramente decorativo." },
+      "semantic": { "$description": "Acompañar con texto visible o aria-label en icon buttons." }
+    }
+  }
+}

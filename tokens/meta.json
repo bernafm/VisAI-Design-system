@@ -1,0 +1,19 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": { "value": "VisAI Design System" },
+    "version": { "value": "1.0.0" },
+    "direction": { "value": "Corriente serena" },
+    "description": {
+      "value": "Sistema de diseño de VisAI. Dirección visual Corriente serena: acento teal (#0B6E78) para confianza y acciones; acento lavanda (#9B97E6) para la capa inteligente VisAI. Tokens semánticos con modos light y dark independientes. Cumple WCAG 2.1 AA."
+    },
+    "authority": {
+      "value": "Este directorio y design.md son la autoridad única en materia visual. El PRD no define reglas visuales."
+    },
+    "typographyFamily": { "value": "Figtree" },
+    "iconLibrary": { "value": "Phosphor Icons", "url": "https://phosphoricons.com" },
+    "iconBaseWeight": { "value": "regular" },
+    "iconActiveWeight": { "value": "duotone" },
+    "accessibility": { "value": "WCAG 2.1 Level AA" }
+  }
+}

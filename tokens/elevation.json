@@ -1,0 +1,26 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "elevation": {
+    "$description": "Sin box-shadows. La elevación se comunica con cambio de superficie y borde.",
+    "level-0": {
+      "$description": "Plano — mismo nivel que surface.",
+      "background": { "light": "{color.surface}", "dark": "{color.surface}" },
+      "border": { "$value": "none" }
+    },
+    "level-1": {
+      "$description": "Tarjetas, paneles elevados.",
+      "background": { "light": "{color.surface-elevated}", "dark": "{color.surface-elevated}" },
+      "border": { "$value": "{border.width.thin} solid {color.border-default}" }
+    },
+    "level-2": {
+      "$description": "Dropdowns, popovers, modales.",
+      "background": { "light": "{color.surface-elevated}", "dark": "{color.surface-elevated}" },
+      "border": { "$value": "{border.width.thin} solid {color.border-strong}" }
+    },
+    "level-3": {
+      "$description": "Insight panel VisAI (capa inteligente).",
+      "background": { "light": "{color.surface-insight}", "dark": "{color.surface-insight}" },
+      "border": { "$value": "{border.width.thin} solid {color.border-default}" }
+    }
+  }
+}

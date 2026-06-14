@@ -1,0 +1,151 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "surface": {
+      "$type": "color",
+      "$description": "Fondo base de la aplicación.",
+      "light": { "$value": "#F6F7FB" },
+      "dark": { "$value": "#0E1218" }
+    },
+    "surface-elevated": {
+      "$type": "color",
+      "$description": "Tarjetas, paneles, modales y superficies sobre surface.",
+      "light": { "$value": "#FFFFFF" },
+      "dark": { "$value": "#161B26" }
+    },
+    "surface-sunken": {
+      "$type": "color",
+      "$description": "Áreas empotradas: inputs, wells, code blocks.",
+      "light": { "$value": "#EEF0F6" },
+      "dark": { "$value": "#0A0E14" }
+    },
+    "surface-insight": {
+      "$type": "color",
+      "$description": "Fondo del bloque Perspectiva VisAI (capa inteligente). Lavanda al 16% de opacidad sobre surface.",
+      "light": { "$value": "#9B97E628" },
+      "dark": { "$value": "#AEA9F022" }
+    },
+    "text-primary": {
+      "$type": "color",
+      "$description": "Títulos y cuerpo principal. Contraste AA sobre surface y surface-elevated.",
+      "light": { "$value": "#0F1A22", "contrastOnSurface": "15.2:1" },
+      "dark": { "$value": "#ECEEF4", "contrastOnSurface": "14.8:1" }
+    },
+    "text-secondary": {
+      "$type": "color",
+      "$description": "Metadatos, descripciones, labels secundarios.",
+      "light": { "$value": "#5A6270", "contrastOnSurface": "5.6:1" },
+      "dark": { "$value": "#949AAA", "contrastOnSurface": "5.9:1" }
+    },
+    "text-tertiary": {
+      "$type": "color",
+      "$description": "Placeholders, hints, texto deshabilitado legible.",
+      "light": { "$value": "#8A919E", "contrastOnSurface": "3.5:1", "note": "Solo para texto ≥18px o ≥14px bold" },
+      "dark": { "$value": "#6E7585", "contrastOnSurface": "3.6:1", "note": "Solo para texto ≥18px o ≥14px bold" }
+    },
+    "text-on-accent": {
+      "$type": "color",
+      "$description": "Texto sobre botones teal y fondos accent.",
+      "light": { "$value": "#FFFFFF", "contrastOnAccent": "5.8:1" },
+      "dark": { "$value": "#0F1A22", "contrastOnAccent": "8.2:1" }
+    },
+    "text-on-insight": {
+      "$type": "color",
+      "$description": "Texto sobre surface-insight (lavanda tintado).",
+      "light": { "$value": "#0F1A22" },
+      "dark": { "$value": "#ECEEF4" }
+    },
+    "border-default": {
+      "$type": "color",
+      "$description": "Bordes estructurales, divisores.",
+      "light": { "$value": "#DDE0EC" },
+      "dark": { "$value": "#282E3C" }
+    },
+    "border-strong": {
+      "$type": "color",
+      "$description": "Bordes de énfasis, inputs en foco secundario.",
+      "light": { "$value": "#C5CAD8" },
+      "dark": { "$value": "#3A4154" }
+    },
+    "border-focus": {
+      "$type": "color",
+      "$description": "Anillo de foco accesible (teal).",
+      "light": { "$value": "#0B6E78" },
+      "dark": { "$value": "#22B5C4" }
+    },
+    "accent": {
+      "$type": "color",
+      "$description": "Acento primario (teal). CTAs, links, progreso, badges de confianza.",
+      "light": { "$value": "#0B6E78" },
+      "dark": { "$value": "#22B5C4" }
+    },
+    "accent-hover": {
+      "$type": "color",
+      "$description": "Estado hover del acento teal.",
+      "light": { "$value": "#095A62" },
+      "dark": { "$value": "#2EC9D8" }
+    },
+    "accent-muted": {
+      "$type": "color",
+      "$description": "Fondo tintado teal para badges y icon containers.",
+      "light": { "$value": "#0B6E7818" },
+      "dark": { "$value": "#22B5C422" }
+    },
+    "accent-secondary": {
+      "$type": "color",
+      "$description": "Acento secundario (lavanda). Capa VisAI, selección, wordmark AI.",
+      "light": { "$value": "#9B97E6" },
+      "dark": { "$value": "#AEA9F0" }
+    },
+    "accent-secondary-muted": {
+      "$type": "color",
+      "$description": "Fondo tintado lavanda para insight panels e iconos IA.",
+      "light": { "$value": "#9B97E655" },
+      "dark": { "$value": "#AEA9F044" }
+    },
+    "success": {
+      "$type": "color",
+      "$description": "Estado éxito, requisito completado.",
+      "light": { "$value": "#1A8A6B" },
+      "dark": { "$value": "#3FAE7A" }
+    },
+    "success-muted": {
+      "$type": "color",
+      "light": { "$value": "#1A8A6B18" },
+      "dark": { "$value": "#3FAE7A22" }
+    },
+    "warning": {
+      "$type": "color",
+      "$description": "Advertencias, plazos próximos.",
+      "light": { "$value": "#B8720A" },
+      "dark": { "$value": "#E5A54B" }
+    },
+    "warning-muted": {
+      "$type": "color",
+      "light": { "$value": "#B8720A18" },
+      "dark": { "$value": "#E5A54B22" }
+    },
+    "error": {
+      "$type": "color",
+      "$description": "Errores, bloqueos, validación fallida.",
+      "light": { "$value": "#C43A52" },
+      "dark": { "$value": "#E87888" }
+    },
+    "error-muted": {
+      "$type": "color",
+      "light": { "$value": "#C43A5218" },
+      "dark": { "$value": "#E8788822" }
+    },
+    "info": {
+      "$type": "color",
+      "$description": "Información contextual, callouts informativos.",
+      "light": { "$value": "#3D7A9E" },
+      "dark": { "$value": "#6A9FD4" }
+    },
+    "info-muted": {
+      "$type": "color",
+      "light": { "$value": "#3D7A9E18" },
+      "dark": { "$value": "#6A9FD422" }
+    }
+  }
+}

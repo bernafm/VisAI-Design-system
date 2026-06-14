@@ -1,0 +1,22 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "border": {
+    "width": {
+      "none": { "$type": "dimension", "$value": "0px" },
+      "thin": { "$type": "dimension", "$value": "1px" },
+      "medium": { "$type": "dimension", "$value": "2px" },
+      "thick": { "$type": "dimension", "$value": "3px" }
+    },
+    "radius": {
+      "none": { "$type": "dimension", "$value": "0px" },
+      "sm": { "$type": "dimension", "$value": "4px", "$description": "Badges, chips pequeños" },
+      "md": { "$type": "dimension", "$value": "8px", "$description": "Inputs, botones, items de lista" },
+      "lg": { "$type": "dimension", "$value": "12px", "$description": "Tarjetas, icon containers" },
+      "xl": { "$type": "dimension", "$value": "16px", "$description": "Paneles grandes, modales" },
+      "full": { "$type": "dimension", "$value": "9999px", "$description": "Avatares, pills circulares" }
+    },
+    "style": {
+      "default": { "$value": "solid" }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "components": {
+    "Button": {
+      "description": "Acción principal o secundaria. Touch target mínimo 44px en size lg.",
+      "variants": ["primary", "secondary", "ghost", "danger"],
+      "sizes": ["sm", "md", "lg"],
+      "states": ["default", "hover", "active", "focus", "disabled", "loading"],
+      "props": {
+        "variant": { "type": "enum", "values": ["primary", "secondary", "ghost", "danger"], "default": "primary" },
+        "size": { "type": "enum", "values": ["sm", "md", "lg"], "default": "md" },
+        "disabled": { "type": "boolean", "default": false },
+        "loading": { "type": "boolean", "default": false },
+        "fullWidth": { "type": "boolean", "default": false },
+        "leftIcon": { "type": "ReactNode", "optional": true },
+        "rightIcon": { "type": "ReactNode", "optional": true },
+        "children": { "type": "ReactNode", "required": true },
+        "onClick": { "type": "function", "optional": true },
+        "type": { "type": "enum", "values": ["button", "submit", "reset"], "default": "button" },
+        "ariaLabel": { "type": "string", "optional": true, "note": "Requerido si children no es texto visible" }
+      },
+      "tokens": {
+        "primary": { "background": "{color.accent}", "color": "{color.text-on-accent}", "hover": "{color.accent-hover}" },
+        "secondary": { "background": "transparent", "border": "{color.accent}", "color": "{color.accent}" },
+        "ghost": { "background": "transparent", "color": "{color.text-secondary}" },
+        "danger": { "background": "{color.error}", "color": "{color.text-on-accent}" },
+        "radius": "{border.radius.md}",
+        "padding": { "sm": "{spacing.2} {spacing.3}", "md": "{spacing.3} {spacing.4}", "lg": "{spacing.4} {spacing.6}" },
+        "height": { "sm": "{size.control.height-sm}", "md": "{size.control.height-md}", "lg": "{size.control.height-lg}" }
+      }
+    },
+    "IconButton": {
+      "description": "Botón cuadrado solo con icono. Requiere aria-label.",
+      "variants": ["default", "ghost", "insight"],
+      "sizes": ["sm", "md", "lg"],
+      "states": ["default", "hover", "active", "focus", "disabled"],
+      "props": {
+        "variant": { "type": "enum", "values": ["default", "ghost", "insight"], "default": "default" },
+        "size": { "type": "enum", "values": ["sm", "md", "lg"], "default": "md" },
+        "icon": { "type": "ReactNode", "required": true },
+        "ariaLabel": { "type": "string", "required": true },
+        "disabled": { "type": "boolean", "default": false },
+        "onClick": { "type": "function", "optional": true }
+      },
+      "tokens": {
+        "insight": { "background": "{color.accent-secondary-muted}", "color": "{color.accent-secondary}" },
+        "minSize": "{size.touch-target.min}"
+      }
+    },
+    "TextInput": {
+      "description": "Campo de texto de una línea.",
+      "states": ["default", "hover", "focus", "error", "disabled"],
+      "props": {
+        "value": { "type": "string", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "label": { "type": "string", "optional": true },
+        "placeholder": { "type": "string", "optional": true },
+        "helperText": { "type": "string", "optional": true },
+        "error": { "type": "string", "optional": true },
+        "disabled": { "type": "boolean", "default": false },
+        "required": { "type": "boolean", "default": false },
+        "type": { "type": "enum", "values": ["text", "email", "password", "number", "search"], "default": "text" },
+        "id": { "type": "string", "required": true },
+        "name": { "type": "string", "optional": true }
+      },
+      "tokens": {
+        "height": "{size.control.height-md}",
+        "background": "{color.surface-sunken}",
+        "border": "{color.border-default}",
+        "borderFocus": "{color.border-focus}",
+        "borderError": "{color.error}",
+        "radius": "{border.radius.md}",
+        "padding": "{spacing.3} {spacing.4}"
+      }
+    },
+    "TextArea": {
+      "description": "Campo de texto multilínea.",
+      "states": ["default", "focus", "error", "disabled"],
+      "props": {
+        "value": { "type": "string", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "label": { "type": "string", "optional": true },
+        "placeholder": { "type": "string", "optional": true },
+        "helperText": { "type": "string", "optional": true },
+        "error": { "type": "string", "optional": true },
+        "rows": { "type": "number", "default": 4 },
+        "disabled": { "type": "boolean", "default": false },
+        "id": { "type": "string", "required": true }
+      }
+    },
+    "Select": {
+      "description": "Selector desplegable.",
+      "states": ["default", "focus", "error", "disabled"],
+      "props": {
+        "value": { "type": "string", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "options": { "type": "Array<{value: string, label: string}>", "required": true },
+        "label": { "type": "string", "optional": true },
+        "placeholder": { "type": "string", "optional": true },
+        "error": { "type": "string", "optional": true },
+        "disabled": { "type": "boolean", "default": false },
+        "id": { "type": "string", "required": true }
+      }
+    },
+    "Checkbox": {
+      "description": "Selección múltiple o toggle booleano con label.",
+      "states": ["unchecked", "checked", "indeterminate", "focus", "disabled"],
+      "props": {
+        "checked": { "type": "boolean", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "label": { "type": "ReactNode", "optional": true },
+        "disabled": { "type": "boolean", "default": false },
+        "id": { "type": "string", "required": true },
+        "indeterminate": { "type": "boolean", "default": false }
+      },
+      "tokens": {
+        "checkedColor": "{color.accent}",
+        "size": "18px",
+        "radius": "{border.radius.sm}"
+      }
+    },
+    "Radio": {
+      "description": "Selección única en un grupo.",
+      "states": ["unchecked", "checked", "focus", "disabled"],
+      "props": {
+        "checked": { "type": "boolean", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "label": { "type": "ReactNode", "optional": true },
+        "name": { "type": "string", "required": true },
+        "value": { "type": "string", "required": true },
+        "disabled": { "type": "boolean", "default": false },
+        "id": { "type": "string", "required": true }
+      }
+    },
+    "Toggle": {
+      "description": "Interruptor on/off.",
+      "states": ["off", "on", "focus", "disabled"],
+      "props": {
+        "checked": { "type": "boolean", "required": true },
+        "onChange": { "type": "function", "required": true },
+        "label": { "type": "string", "optional": true },
+        "disabled": { "type": "boolean", "default": false },
+        "id": { "type": "string", "required": true }
+      },
+      "tokens": {
+        "trackOn": "{color.accent}",
+        "trackOff": "{color.border-strong}"
+      }
+    },
+    "Card": {
+      "description": "Contenedor elevado para agrupar contenido relacionado.",
+      "variants": ["default", "borderless"],
+      "sizes": ["base", "lg"],
+      "props": {
+        "variant": { "type": "enum", "values": ["default", "borderless"], "default": "default" },
+        "size": { "type": "enum", "values": ["base", "lg"], "default": "base" },
+        "children": { "type": "ReactNode", "required": true }
+      },
+      "tokens": {
+        "background": "{color.surface-elevated}",
+        "border": "{color.border-default}",
+        "radius": "{border.radius.lg}",
+        "elevation": "{elevation.level-1}"
+      }
+    },
+    "InsightPanel": {
+      "description": "Bloque Perspectiva VisAI. Usa acento lavanda. Exclusivo de la capa inteligente.",
+      "props": {
+        "title": { "type": "string", "default": "Perspectiva VisAI" },
+        "children": { "type": "ReactNode", "required": true },
+        "icon": { "type": "ReactNode", "optional": true }
+      },
+      "tokens": {
+        "background": "{color.surface-insight}",
+        "iconBackground": "{color.accent-secondary-muted}",
+        "iconColor": "{color.accent-secondary}",
+        "elevation": "{elevation.level-3}"
+      }
+    },
+    "Callout": {
+      "description": "Mensaje contextual inline.",
+      "variants": ["info", "success", "warning", "error"],
+      "props": {
+        "tone": { "type": "enum", "values": ["info", "success", "warning", "error"], "default": "info" },
+        "title": { "type": "string", "optional": true },
+        "children": { "type": "ReactNode", "required": true },
+        "icon": { "type": "boolean", "default": true }
+      },
+      "tokens": {
+        "info": { "background": "{color.info-muted}", "border": "{color.info}", "color": "{color.info}" },
+        "success": { "background": "{color.success-muted}", "border": "{color.success}" },
+        "warning": { "background": "{color.warning-muted}", "border": "{color.warning}" },
+        "error": { "background": "{color.error-muted}", "border": "{color.error}" },
+        "radius": "{border.radius.md}",
+        "padding": "{spacing.4}"
+      }
+    },
+    "Pill": {
+      "description": "Etiqueta compacta de estado o categoría.",
+      "variants": ["neutral", "accent", "insight", "success", "warning", "error", "info"],
+      "sizes": ["sm", "md"],
+      "props": {
+        "tone": { "type": "enum", "values": ["neutral", "accent", "insight", "success", "warning", "error", "info"], "default": "neutral" },
+        "size": { "type": "enum", "values": ["sm", "md"], "default": "md" },
+        "children": { "type": "ReactNode", "required": true }
+      },
+      "tokens": {
+        "insight": { "background": "{color.accent-secondary-muted}", "color": "{color.accent-secondary}" },
+        "accent": { "background": "{color.accent-muted}", "color": "{color.accent}" },
+        "radius": "{border.radius.sm}"
+      }
+    },
+    "Link": {
+      "description": "Enlace de navegación o acción inline.",
+      "props": {
+        "href": { "type": "string", "required": true },
+        "children": { "type": "ReactNode", "required": true },
+        "external": { "type": "boolean", "default": false }
+      },
+      "tokens": "{connection.link}"
+    },
+    "Divider": {
+      "description": "Separador horizontal estructural.",
+      "props": {
+        "spacing": { "type": "enum", "values": ["none", "sm", "md", "lg"], "default": "md" }
+      },
+      "tokens": {
+        "color": "{color.border-default}",
+        "height": "{border.width.thin}"
+      }
+    },
+    "Modal": {
+      "description": "Diálogo superpuesto con foco atrapado.",
+      "props": {
+        "open": { "type": "boolean", "required": true },
+        "onClose": { "type": "function", "required": true },
+        "title": { "type": "string", "required": true },
+        "children": { "type": "ReactNode", "required": true },
+        "footer": { "type": "ReactNode", "optional": true },
+        "size": { "type": "enum", "values": ["sm", "md", "lg"], "default": "md" }
+      },
+      "accessibility": {
+        "role": "dialog",
+        "ariaModal": true,
+        "focusTrap": true,
+        "escapeCloses": true
+      }
+    },
+    "NavItem": {
+      "description": "Ítem de navegación lateral o superior.",
+      "states": ["default", "hover", "active", "focus"],
+      "props": {
+        "label": { "type": "string", "required": true },
+        "href": { "type": "string", "required": true },
+        "icon": { "type": "ReactNode", "optional": true },
+        "active": { "type": "boolean", "default": false }
+      },
+      "tokens": {
+        "activeBackground": "{color.accent-muted}",
+        "activeColor": "{color.accent}",
+        "activeBorder": "{color.accent}"
+      }
+    },
+    "ChecklistItem": {
+      "description": "Ítem de checklist de requisitos de visa.",
+      "states": ["pending", "active", "completed", "disabled"],
+      "props": {
+        "label": { "type": "string", "required": true },
+        "description": { "type": "string", "optional": true },
+        "status": { "type": "enum", "values": ["pending", "active", "completed"], "default": "pending" },
+        "action": { "type": "ReactNode", "optional": true },
+        "onClick": { "type": "function", "optional": true }
+      }
+    },
+    "RecommendationCard": {
+      "description": "Tarjeta de programa/universidad recomendado.",
+      "props": {
+        "title": { "type": "string", "required": true },
+        "subtitle": { "type": "string", "optional": true },
+        "description": { "type": "string", "optional": true },
+        "badge": { "type": "string", "optional": true },
+        "metadata": { "type": "Array<{label: string, value: string}>", "optional": true },
+        "insight": { "type": "ReactNode", "optional": true },
+        "onAction": { "type": "function", "optional": true },
+        "actionLabel": { "type": "string", "default": "Ver detalles" }
+      }
+    },
+    "ProgressBar": {
+      "description": "Barra de progreso de checklist o flujo.",
+      "props": {
+        "value": { "type": "number", "required": true, "min": 0, "max": 100 },
+        "label": { "type": "string", "optional": true },
+        "showValue": { "type": "boolean", "default": true }
+      },
+      "tokens": {
+        "track": "{color.surface-sunken}",
+        "fill": "{color.accent}",
+        "height": "6px",
+        "radius": "{border.radius.full}"
+      }
+    }
+  }
+}

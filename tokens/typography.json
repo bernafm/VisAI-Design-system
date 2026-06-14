@@ -1,0 +1,104 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": "'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif",
+        "$description": "Familia principal. Google Fonts: Figtree. Geométrica, amigable, alta legibilidad."
+      }
+    },
+    "fontWeight": {
+      "regular": { "$type": "fontWeight", "$value": "400" },
+      "medium": { "$type": "fontWeight", "$value": "500" },
+      "semibold": { "$type": "fontWeight", "$value": "600" },
+      "bold": { "$type": "fontWeight", "$value": "700" }
+    },
+    "fontSize": {
+      "display": { "$type": "dimension", "$value": "32px" },
+      "h1": { "$type": "dimension", "$value": "28px" },
+      "h2": { "$type": "dimension", "$value": "22px" },
+      "h3": { "$type": "dimension", "$value": "18px" },
+      "body": { "$type": "dimension", "$value": "16px" },
+      "body-sm": { "$type": "dimension", "$value": "14px" },
+      "caption": { "$type": "dimension", "$value": "12px" },
+      "label": { "$type": "dimension", "$value": "14px" }
+    },
+    "lineHeight": {
+      "display": { "$type": "number", "$value": 1.25 },
+      "h1": { "$type": "number", "$value": 1.29 },
+      "h2": { "$type": "number", "$value": 1.27 },
+      "h3": { "$type": "number", "$value": 1.33 },
+      "body": { "$type": "number", "$value": 1.5 },
+      "body-sm": { "$type": "number", "$value": 1.43 },
+      "caption": { "$type": "number", "$value": 1.33 },
+      "label": { "$type": "number", "$value": 1.43 }
+    },
+    "letterSpacing": {
+      "tight": { "$type": "dimension", "$value": "-0.02em" },
+      "normal": { "$type": "dimension", "$value": "0" },
+      "wide": { "$type": "dimension", "$value": "0.02em" }
+    },
+    "textStyle": {
+      "display": {
+        "$type": "typography",
+        "$description": "Hero, pantallas de bienvenida.",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.display}",
+        "fontWeight": "{typography.fontWeight.semibold}",
+        "lineHeight": "{typography.lineHeight.display}",
+        "letterSpacing": "{typography.letterSpacing.tight}"
+      },
+      "h1": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.h1}",
+        "fontWeight": "{typography.fontWeight.semibold}",
+        "lineHeight": "{typography.lineHeight.h1}",
+        "letterSpacing": "{typography.letterSpacing.tight}"
+      },
+      "h2": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.h2}",
+        "fontWeight": "{typography.fontWeight.semibold}",
+        "lineHeight": "{typography.lineHeight.h2}"
+      },
+      "h3": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.h3}",
+        "fontWeight": "{typography.fontWeight.semibold}",
+        "lineHeight": "{typography.lineHeight.h3}"
+      },
+      "body": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.body}",
+        "fontWeight": "{typography.fontWeight.regular}",
+        "lineHeight": "{typography.lineHeight.body}"
+      },
+      "body-sm": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.body-sm}",
+        "fontWeight": "{typography.fontWeight.regular}",
+        "lineHeight": "{typography.lineHeight.body-sm}"
+      },
+      "label": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.label}",
+        "fontWeight": "{typography.fontWeight.medium}",
+        "lineHeight": "{typography.lineHeight.label}"
+      },
+      "caption": {
+        "$type": "typography",
+        "fontFamily": "{typography.fontFamily.sans}",
+        "fontSize": "{typography.fontSize.caption}",
+        "fontWeight": "{typography.fontWeight.regular}",
+        "lineHeight": "{typography.lineHeight.caption}"
+      }
+    }
+  }
+}

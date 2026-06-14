@@ -1,0 +1,99 @@
+/* VisAI Design System — Corriente serena tokens as CSS custom properties */
+
+:root,
+[data-theme="light"] {
+  --visai-surface: #f6f7fb;
+  --visai-surface-elevated: #ffffff;
+  --visai-surface-sunken: #eef0f6;
+  --visai-surface-insight: #9b97e628;
+
+  --visai-text-primary: #0f1a22;
+  --visai-text-secondary: #5a6270;
+  --visai-text-tertiary: #8a919e;
+  --visai-text-on-accent: #ffffff;
+  --visai-text-on-insight: #0f1a22;
+
+  --visai-border-default: #dde0ec;
+  --visai-border-strong: #c5cad8;
+  --visai-border-focus: #0b6e78;
+
+  --visai-accent: #0b6e78;
+  --visai-accent-hover: #095a62;
+  --visai-accent-muted: #0b6e7818;
+  --visai-accent-secondary: #9b97e6;
+  --visai-accent-secondary-muted: #9b97e655;
+
+  --visai-success: #1a8a6b;
+  --visai-success-muted: #1a8a6b18;
+  --visai-warning: #b8720a;
+  --visai-warning-muted: #b8720a18;
+  --visai-error: #c43a52;
+  --visai-error-muted: #c43a5218;
+  --visai-info: #3d7a9e;
+  --visai-info-muted: #3d7a9e18;
+
+  --visai-focus-ring: 0 0 0 2px var(--visai-surface-elevated), 0 0 0 4px var(--visai-border-focus);
+}
+
+[data-theme="dark"] {
+  --visai-surface: #0e1218;
+  --visai-surface-elevated: #161b26;
+  --visai-surface-sunken: #0a0e14;
+  --visai-surface-insight: #aea9f022;
+
+  --visai-text-primary: #eceef4;
+  --visai-text-secondary: #949aaa;
+  --visai-text-tertiary: #6e7585;
+  --visai-text-on-accent: #0f1a22;
+  --visai-text-on-insight: #eceef4;
+
+  --visai-border-default: #282e3c;
+  --visai-border-strong: #3a4154;
+  --visai-border-focus: #22b5c4;
+
+  --visai-accent: #22b5c4;
+  --visai-accent-hover: #2ec9d8;
+  --visai-accent-muted: #22b5c422;
+  --visai-accent-secondary: #aea9f0;
+  --visai-accent-secondary-muted: #aea9f044;
+
+  --visai-success: #3fae7a;
+  --visai-success-muted: #3fae7a22;
+  --visai-warning: #e5a54b;
+  --visai-warning-muted: #e5a54b22;
+  --visai-error: #e87888;
+  --visai-error-muted: #e8788822;
+  --visai-info: #6a9fd4;
+  --visai-info-muted: #6a9fd422;
+
+  --visai-focus-ring: 0 0 0 2px var(--visai-surface-elevated), 0 0 0 4px var(--visai-border-focus);
+}
+
+/* Spacing */
+:root {
+  --visai-space-0: 0;
+  --visai-space-1: 4px;
+  --visai-space-2: 8px;
+  --visai-space-3: 12px;
+  --visai-space-4: 16px;
+  --visai-space-5: 20px;
+  --visai-space-6: 24px;
+  --visai-space-8: 32px;
+  --visai-space-10: 40px;
+  --visai-space-12: 48px;
+  --visai-space-16: 64px;
+  --visai-space-20: 80px;
+
+  --visai-radius-sm: 4px;
+  --visai-radius-md: 8px;
+  --visai-radius-lg: 12px;
+  --visai-radius-xl: 16px;
+  --visai-radius-full: 9999px;
+
+  --visai-font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --visai-duration-fast: 150ms;
+  --visai-duration-normal: 250ms;
+  --visai-duration-slow: 400ms;
+  --visai-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}

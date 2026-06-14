@@ -1,0 +1,29 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "connection": {
+    "$description": "Estados de conexión interactiva: links, foco, hover, active, disabled. Cumplen WCAG 2.1 AA.",
+    "link": {
+      "color": { "light": "{color.accent}", "dark": "{color.accent}" },
+      "hover": { "light": "{color.accent-hover}", "dark": "{color.accent-hover}" },
+      "underline": { "default": "none", "hover": "underline" },
+      "decoration-thickness": { "$value": "1px" }
+    },
+    "focus-ring": {
+      "width": { "$value": "{border.width.medium}" },
+      "color": { "light": "{color.border-focus}", "dark": "{color.border-focus}" },
+      "offset": { "$value": "2px" },
+      "style": { "$value": "solid" },
+      "$description": "Visible en :focus-visible. Nunca suprimir sin alternativa equivalente."
+    },
+    "interactive": {
+      "hover-opacity": { "$value": "0.92" },
+      "active-scale": { "$value": "0.98" },
+      "disabled-opacity": { "$value": "0.45" },
+      "transition": { "$value": "{motion.duration.fast} {motion.easing.standard}" }
+    },
+    "selection": {
+      "background": { "light": "{color.accent-secondary-muted}", "dark": "{color.accent-secondary-muted}" },
+      "border": { "light": "{color.accent-secondary}", "dark": "{color.accent-secondary}" }
+    }
+  }
+}

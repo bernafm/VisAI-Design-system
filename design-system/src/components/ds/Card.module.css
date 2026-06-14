@@ -1,0 +1,93 @@
+.card {
+  background: var(--visai-surface-elevated);
+  border-radius: var(--visai-radius-lg);
+}
+
+.default {
+  border: 1px solid var(--visai-border-default);
+}
+
+.borderless {
+  border: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--visai-space-4) var(--visai-space-6);
+  border-bottom: 1px solid var(--visai-border-default);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.lg .header {
+  padding: var(--visai-space-5) var(--visai-space-6);
+}
+
+.headerTitle {
+  color: var(--visai-text-primary);
+}
+
+.body {
+  padding: var(--visai-space-6);
+}
+
+.insight {
+  background: var(--visai-surface-insight);
+  border-bottom: 1px solid var(--visai-border-default);
+  padding: var(--visai-space-4) var(--visai-space-6);
+}
+
+.insightInner {
+  display: flex;
+  gap: var(--visai-space-3);
+  align-items: flex-start;
+}
+
+.insightIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--visai-radius-md);
+  background: var(--visai-accent-secondary-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--visai-accent-secondary);
+  flex-shrink: 0;
+}
+
+.insightTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--visai-text-on-insight);
+  margin: 0 0 var(--visai-space-1);
+}
+
+.insightBody {
+  font-size: 14px;
+  color: var(--visai-text-secondary);
+  line-height: 1.43;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--visai-border-default);
+  margin: 0;
+}
+
+.spacer-sm {
+  margin: var(--visai-space-2) 0;
+}
+
+.spacer-md {
+  margin: var(--visai-space-4) 0;
+}
+
+.spacer-lg {
+  margin: var(--visai-space-6) 0;
+}
+
+.spacer-none {
+  margin: 0;
+}

@@ -1,0 +1,53 @@
+---
+description: VisAI design system — leer tokens antes de escribir UI; sin valores hardcodeados
+alwaysApply: true
+---
+
+# VisAI Design System
+
+Antes de crear o modificar estilos, componentes o pantallas, leer **`tokens/index.json`**.
+
+## Contexto suficiente (sin servidor)
+
+`tokens/*.json` + **`design.md`** — no requiere URL ni HTML.
+
+## Orden de lectura
+
+1. `tokens/index.json` — manifiesto y reglas
+2. `tokens/meta.json` — versión y restricciones
+3. `tokens/{categoría}.json` — valores canónicos (light/dark)
+4. `tokens/components.json` — API de componentes
+5. `design.md` — reglas de uso
+
+## Fuente de verdad
+
+| Canónico | No usar como fuente de valores |
+|---|---|
+| `tokens/*.json` | HTML en `design-system/dist/` |
+| `tokens/components.json` | hex/px inventados en código |
+| `design.md` (reglas) | inferir valores desde prose |
+
+El HTML exportado (`npm run build` en `design-system/`) es solo referencia visual para humanos.
+
+## Reglas al implementar
+
+- Resolver tokens semánticos: `color.accent`, `spacing.4`, `border.radius.md`, etc.
+- **Teal** (`color.accent`) → CTAs, links, confianza
+- **Lavanda** (`color.accent-secondary`) → capa VisAI, insights, wordmark "AI"
+- Tipografía: **Figtree** · Iconos: **Phosphor** Regular + Duotone (IA/activo)
+- Sin box-shadows ni gradientes · WCAG 2.1 AA
+- Reutilizar componentes en `design-system/src/components/ds/` cuando existan
+
+## Ejemplo
+
+```css
+/* ❌ */
+.button { background: #0B6E78; padding: 16px; }
+
+/* ✅ */
+.button {
+  background: var(--visai-accent);
+  padding: var(--visai-space-4);
+  border-radius: var(--visai-radius-md);
+}
+```

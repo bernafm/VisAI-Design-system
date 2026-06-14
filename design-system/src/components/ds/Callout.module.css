@@ -1,0 +1,135 @@
+.callout {
+  display: flex;
+  gap: var(--visai-space-3);
+  padding: var(--visai-space-4);
+  border-radius: var(--visai-radius-md);
+  border-left: 3px solid;
+  font-size: 14px;
+  line-height: 1.43;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.title {
+  font-weight: 600;
+  margin: 0 0 var(--visai-space-1);
+}
+
+.body {
+  color: var(--visai-text-secondary);
+}
+
+.info {
+  background: var(--visai-info-muted);
+  border-color: var(--visai-info);
+  color: var(--visai-info);
+}
+
+.success {
+  background: var(--visai-success-muted);
+  border-color: var(--visai-success);
+  color: var(--visai-success);
+}
+
+.warning {
+  background: var(--visai-warning-muted);
+  border-color: var(--visai-warning);
+  color: var(--visai-warning);
+}
+
+.error {
+  background: var(--visai-error-muted);
+  border-color: var(--visai-error);
+  color: var(--visai-error);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  border-radius: var(--visai-radius-sm);
+  white-space: nowrap;
+}
+
+.pill-sm {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.pill-md {
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+.neutral {
+  background: var(--visai-surface-sunken);
+  color: var(--visai-text-secondary);
+}
+
+.accent {
+  background: var(--visai-accent-muted);
+  color: var(--visai-accent);
+}
+
+.insight {
+  background: var(--visai-accent-secondary-muted);
+  color: var(--visai-accent-secondary);
+}
+
+.success {
+  background: var(--visai-success-muted);
+  color: var(--visai-success);
+}
+
+.warning {
+  background: var(--visai-warning-muted);
+  color: var(--visai-warning);
+}
+
+.error {
+  background: var(--visai-error-muted);
+  color: var(--visai-error);
+}
+
+.info {
+  background: var(--visai-info-muted);
+  color: var(--visai-info);
+}
+
+.progressWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--visai-space-2);
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progressLabel {
+  color: var(--visai-text-primary);
+  font-weight: 500;
+}
+
+.progressValue {
+  color: var(--visai-text-secondary);
+}
+
+.progressTrack {
+  height: 6px;
+  background: var(--visai-surface-sunken);
+  border-radius: var(--visai-radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--visai-accent);
+  border-radius: var(--visai-radius-full);
+  transition: width var(--visai-duration-normal) var(--visai-easing);
+}

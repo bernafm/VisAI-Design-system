@@ -1,0 +1,55 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Manifiesto de tokens VisAI. Los agentes de IA deben leer este archivo primero para descubrir el sistema.",
+  "version": "1.0.0",
+  "direction": "Corriente serena",
+  "files": {
+    "meta": "./meta.json",
+    "color": "./color.json",
+    "typography": "./typography.json",
+    "spacing": "./spacing.json",
+    "border": "./border.json",
+    "elevation": "./elevation.json",
+    "size": "./size.json",
+    "layout": "./layout.json",
+    "connection": "./connection.json",
+    "motion": "./motion.json",
+    "iconography": "./iconography.json",
+    "components": "./components.json"
+  },
+  "modes": ["light", "dark"],
+  "cssVariablesPrefix": "--visai-",
+  "documentation": {
+    "aiContext": {
+      "required": ["tokens/index.json", "tokens/*.json", "design.md"],
+      "description": "Contexto suficiente para agentes de IA. No requiere servidor ni HTML."
+    },
+    "humanReference": {
+      "buildCommand": "cd design-system && npm run build",
+      "output": "design-system/dist/",
+      "description": "Sitio estático portable (HTML + JS + CSS). Comprimir y subir a cualquier hosting, o abrir vía servidor estático. No es fuente canónica de valores."
+    },
+    "siteSections": {
+      "foundations": { "role": "visual-reference", "canonical": false },
+      "inventory": { "role": "token-catalog-mirror", "canonical": false },
+      "components": { "role": "component-playground", "canonical": false }
+    },
+    "aiReadingOrder": [
+      "tokens/index.json",
+      "tokens/meta.json",
+      "tokens/{category}.json",
+      "tokens/components.json",
+      "design.md"
+    ],
+    "canonicalSource": "tokens/*.json",
+    "doNotScrape": ["design-system/dist", "/foundations"]
+  },
+  "rules": [
+    "Usar tokens semánticos, nunca valores hardcodeados.",
+    "Teal (accent) para acciones y confianza; lavanda (accent-secondary) para capa VisAI.",
+    "No usar box-shadows ni gradientes.",
+    "Cumplir WCAG 2.1 AA en todos los pares texto/fondo.",
+    "Tono de UI: culto y cercano, sin tecnicismos.",
+    "Iconos: Phosphor Regular base, Duotone para activo/IA."
+  ]
+}

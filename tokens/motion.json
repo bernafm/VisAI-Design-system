@@ -1,0 +1,38 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "motion": {
+    "duration": {
+      "instant": { "$type": "duration", "$value": "0ms" },
+      "fast": { "$type": "duration", "$value": "150ms", "$description": "Hover, toggle, checkbox" },
+      "normal": { "$type": "duration", "$value": "250ms", "$description": "Paneles, modales, expansión" },
+      "slow": { "$type": "duration", "$value": "400ms", "$description": "Transiciones de página" }
+    },
+    "easing": {
+      "standard": { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1] },
+      "enter": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] },
+      "exit": { "$type": "cubicBezier", "$value": [0.4, 0, 1, 1] }
+    },
+    "reducedMotion": {
+      "$description": "Si prefers-reduced-motion: reduce, usar duration.instant.",
+      "respectUserPreference": true
+    },
+    "animation": {
+      "fade-in": {
+        "keyframes": "opacity 0 → 1",
+        "duration": "{motion.duration.normal}",
+        "easing": "{motion.easing.enter}"
+      },
+      "slide-up": {
+        "keyframes": "translateY(8px) → 0, opacity 0 → 1",
+        "duration": "{motion.duration.normal}",
+        "easing": "{motion.easing.enter}"
+      },
+      "pulse-subtle": {
+        "keyframes": "opacity 1 → 0.7 → 1",
+        "duration": "2000ms",
+        "easing": "{motion.easing.standard}",
+        "usage": "Solo estados de carga; no decorativo"
+      }
+    }
+  }
+}

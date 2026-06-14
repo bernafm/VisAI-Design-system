@@ -1,0 +1,29 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "spacing": {
+    "$description": "Escala base 4px. Densidad limpia y amplia.",
+    "0": { "$type": "dimension", "$value": "0px" },
+    "1": { "$type": "dimension", "$value": "4px" },
+    "2": { "$type": "dimension", "$value": "8px" },
+    "3": { "$type": "dimension", "$value": "12px" },
+    "4": { "$type": "dimension", "$value": "16px" },
+    "5": { "$type": "dimension", "$value": "20px" },
+    "6": { "$type": "dimension", "$value": "24px" },
+    "8": { "$type": "dimension", "$value": "32px" },
+    "10": { "$type": "dimension", "$value": "40px" },
+    "12": { "$type": "dimension", "$value": "48px" },
+    "16": { "$type": "dimension", "$value": "64px" },
+    "20": { "$type": "dimension", "$value": "80px" },
+    "semantic": {
+      "page-padding-mobile": { "$value": "{spacing.6}" },
+      "page-padding-desktop": { "$value": "{spacing.12}" },
+      "card-padding": { "$value": "{spacing.6}" },
+      "card-padding-lg": { "$value": "{spacing.6}" },
+      "section-gap": { "$value": "{spacing.8}" },
+      "stack-gap-sm": { "$value": "{spacing.2}" },
+      "stack-gap-md": { "$value": "{spacing.4}" },
+      "stack-gap-lg": { "$value": "{spacing.6}" },
+      "inline-gap": { "$value": "{spacing.3}" }
+    }
+  }
+}

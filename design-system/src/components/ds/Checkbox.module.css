@@ -1,0 +1,107 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--visai-space-3);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--visai-text-primary);
+}
+
+.input,
+.radioInput,
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--visai-border-strong);
+  border-radius: var(--visai-radius-sm);
+  background: var(--visai-surface-elevated);
+  color: transparent;
+  transition: all var(--visai-duration-fast) var(--visai-easing);
+  flex-shrink: 0;
+}
+
+.input:checked + .box {
+  background: var(--visai-accent);
+  border-color: var(--visai-accent);
+  color: var(--visai-text-on-accent);
+}
+
+.input:focus-visible + .box,
+.radioInput:focus-visible + .radio,
+.toggleInput:focus-visible + .track {
+  box-shadow: var(--visai-focus-ring);
+}
+
+.input:disabled + .box,
+.radioInput:disabled + .radio,
+.toggleInput:disabled + .track {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.radio {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--visai-border-strong);
+  border-radius: 50%;
+  background: var(--visai-surface-elevated);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.radioInput:checked + .radio::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--visai-accent);
+  border-radius: 50%;
+}
+
+.toggleLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--visai-space-3);
+  cursor: pointer;
+}
+
+.track {
+  width: 44px;
+  height: 24px;
+  background: var(--visai-border-strong);
+  border-radius: var(--visai-radius-full);
+  position: relative;
+  transition: background var(--visai-duration-fast) var(--visai-easing);
+}
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--visai-surface-elevated);
+  border-radius: 50%;
+  transition: transform var(--visai-duration-fast) var(--visai-easing);
+}
+
+.toggleInput:checked + .track {
+  background: var(--visai-accent);
+}
+
+.toggleInput:checked + .track .thumb {
+  transform: translateX(20px);
+}
+
+.text {
+  font-size: 14px;
+}

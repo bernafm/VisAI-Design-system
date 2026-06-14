@@ -1,0 +1,28 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "size": {
+    "icon": {
+      "xs": { "$type": "dimension", "$value": "16px" },
+      "sm": { "$type": "dimension", "$value": "20px" },
+      "md": { "$type": "dimension", "$value": "24px" },
+      "lg": { "$type": "dimension", "$value": "32px" }
+    },
+    "touch-target": {
+      "min": { "$type": "dimension", "$value": "44px", "$description": "Mínimo WCAG para elementos interactivos." }
+    },
+    "control": {
+      "height-sm": { "$type": "dimension", "$value": "32px" },
+      "height-md": { "$type": "dimension", "$value": "40px" },
+      "height-lg": { "$type": "dimension", "$value": "48px" }
+    },
+    "avatar": {
+      "sm": { "$type": "dimension", "$value": "32px" },
+      "md": { "$type": "dimension", "$value": "40px" },
+      "lg": { "$type": "dimension", "$value": "48px" }
+    },
+    "container": {
+      "max-width": { "$type": "dimension", "$value": "1280px" },
+      "content-max": { "$type": "dimension", "$value": "720px", "$description": "Ancho máximo para texto de lectura prolongada." }
+    }
+  }
+}
